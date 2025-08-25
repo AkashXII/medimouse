@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Medical App</title>
+  <link href="./static/index.css" rel="stylesheet">
+</head>
+<body>
+  <!-- LANDING -->
+  <div id="landing">
+    <div id="maincard">
+      <h1>Medi Mouse</h1>
+      <button onclick="signin()">Sign In</button>
+      <button onclick="signup()">Sign Up</button>
+      <p><i>Right Pill, Right Time, Every Time</i></p>
+    </div>
+  </div>
+
+  <!-- SIGN IN -->
+  <div id="signIn" style="display:none;">
+    <h2>Sign In</h2>
+    <input type="text" id="loginUsername" placeholder="Username"><br>
+    <input type="password" id="loginPassword" placeholder="Password"><br>
+    <button onclick="login()">Login</button>
+    <button onclick="landing()">Back</button>
+  </div>
+
+  <!-- SIGN UP -->
+  <div id="signUp" style="display:none;">
+    <h2>Create Account</h2>
+    <input type="text" id="signupName" placeholder="Name"><br>
+    <input type="text" id="signupUsername" placeholder="Username"><br>
+    <input type="password" id="signupPassword" placeholder="Password"><br>
+    <input type="number" id="signupAge" placeholder="Age"><br>
+    <input type="number" step="0.1" id="signupWeight" placeholder="Weight (kg)"><br>
+    <input type="number" step="0.01" id="signupHeight" placeholder="Height (m)"><br>
+    <button onclick="register()">Register</button>
+    <button onclick="landing()">Back</button>
+  </div>
+
+  <!-- DASHBOARD -->
+  <div id="dashboard" style="display:none;">
+    <h1>Medical Dashboard</h1>
+    <p>Welcome, <span id="userWelcome"></span>!</p>
+    <h3>Your BMI: <span id="userBMI">-</span></h3>
+
+    <h3>Add / Edit Medicine</h3>
+    <input type="hidden" id="editMedId">
+    <input type="text" id="medName" placeholder="Medicine Name"><br>
+    <input type="text" id="medDosage" placeholder="Dosage"><br>
+    <input type="text" id="medTime" placeholder="Time"><br>
+    <button onclick="saveMedicine()">Save Medicine</button>
+
+    <h3>Your Medicines</h3>
+    <ul id="medList"></ul>
+
+    <button onclick="logout()">Log Out</button>
+  </div>
+
+  <script src="./static/app.js" defer></script>
+</body>
+</html>

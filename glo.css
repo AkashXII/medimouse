@@ -1,0 +1,59 @@
+/* ---------- MEDICINE LIST ---------- */
+#medList {
+    list-style: none;
+    padding: 0;
+    margin-top: 1rem;
+  }
+  
+  #medList li {
+    background: #e0f7fa;
+    padding: 0.6rem 1rem;
+    margin-bottom: 0.5rem;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  #medList li button {
+    background: #00acc1;
+    color: white;
+    border: none;
+    padding: 0.3rem 0.6rem;
+    margin-left: 0.3rem;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.3s ease;
+  }
+  
+  #medList li button:hover {
+    background: #00838f;
+    transform: translateY(-1px);
+  }
+  
+  #medList li button:active {
+    transform: scale(0.95);
+  }
+  
+  /* ---------- DASHBOARD INPUTS & BUTTONS ---------- */
+  #dashboard input {
+    width: calc(100% - 1.4rem);
+    padding: 0.6rem;
+    margin: 0.4rem 0;
+    border: 1.5px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  #dashboard input:focus {
+    outline: none;
+    border-color: #00acc1;
+    box-shadow: 0 0 6px rgba(0, 172, 193, 0.4);
+  }
+  
+  #dashboard button {
+    margin-top: 0.5rem;
+  }
+  
