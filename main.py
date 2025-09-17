@@ -9,6 +9,13 @@ from passlib.context import CryptContext
 from typing import List
 from pydantic import BaseModel
 import os
+from fastapi.responses import FileResponse
+from fastapi.staticfiles import StaticFiles
+
+
+
+# 👇 This tells FastAPI to serve everything in the "static" folder at /static
+
 
 app = FastAPI()
 
@@ -19,7 +26,7 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"]
 )
-
+app.mount("/static", StaticFiles(directory="static"), name="static")
 # Password hashing
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 def get_password_hash(password): return pwd_context.hash(password)
